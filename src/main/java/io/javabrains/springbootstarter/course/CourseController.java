@@ -23,7 +23,7 @@ public class CourseController {
 		return courseService.getAllCourse(id);
 	}
 
-	@RequestMapping("/topics/{topicId}/courses/{coursId}")
+	@RequestMapping("/topics/{topicId}/courses/{courseId}")
 	public Optional<Course> getCourse(@PathVariable String id) {
 		return courseService.getCourse(id);
 	}

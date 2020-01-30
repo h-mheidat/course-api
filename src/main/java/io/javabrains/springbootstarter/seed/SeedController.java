@@ -1,4 +1,4 @@
-package io.javabrains.springbootstarter.hello;
+package io.javabrains.springbootstarter.seed;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,22 +10,22 @@ import io.javabrains.springbootstarter.topic.Topic;
 import io.javabrains.springbootstarter.topic.TopicDAO;
 
 @RestController
-public class HelloController {
+public class SeedController {
 	
 	@Autowired
 	private TopicDAO topicDAO;
 	
 	List<Topic> topics = new ArrayList<>(Arrays.asList(
-			 new Topic("spring", "Spriinng framework", "Spriinng framework Description"),
+			 new Topic("spring", "Spring framework", "Spring framework Description"),
 			 new Topic("java", "Core java", "Core java Description"),
 			 new Topic("javax", "Core javax", "Core javax Description")));
 
-	@RequestMapping("/hello")
+	@RequestMapping("/seed")
 	public String sayHi(){
 		for (Topic topic : topics) {
 			topicDAO.save(topic);
 		}
-		return "Hi";
+		return "seeded";
 	}
 
 }

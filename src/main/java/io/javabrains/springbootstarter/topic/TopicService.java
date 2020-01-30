@@ -13,7 +13,7 @@ public class TopicService {
 	@Autowired
 	private TopicDAO topicDAO;
 	
-	public List<Topic> getAlltopic() {
+	public List<Topic> getAllTopic() {
 		List <Topic> topics = new ArrayList<>();
 		topicDAO.findAll().forEach(topics::add);
 		return topics;

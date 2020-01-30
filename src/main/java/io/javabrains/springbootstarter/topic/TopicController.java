@@ -17,12 +17,12 @@ public class TopicController {
 	private TopicService topicService;
 	
 	@RequestMapping("/topics")
-	public List<Topic> getAlltopic() {
-		return topicService.getAlltopic();
+	public List<Topic> getAllTopic() {
+		return topicService.getAllTopic();
 	}
 
 	@RequestMapping("/topics/{id}")
-	public Optional<Topic> gettopic(@PathVariable String id) {
+	public Optional<Topic> getTopic(@PathVariable String id) {
 		return topicService.getTopic(id);
 	}
 	
@@ -32,7 +32,7 @@ public class TopicController {
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
-	public void updateTeopic(@RequestBody Topic topic, @PathVariable String id) {
+	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
 		topicService.updateTopic(topic, id);
 	}
 	
