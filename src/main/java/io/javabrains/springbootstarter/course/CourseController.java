@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.javabrains.springbootstarter.topic.Topic;
 
 @RestController
+@RequestMapping("/api")
 public class CourseController {
 	
 	@Autowired
