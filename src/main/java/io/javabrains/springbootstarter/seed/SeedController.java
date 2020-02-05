@@ -10,6 +10,7 @@ import io.javabrains.springbootstarter.topic.Topic;
 import io.javabrains.springbootstarter.topic.TopicDAO;
 
 @RestController
+@RequestMapping("/api")
 public class SeedController {
 	
 	@Autowired
