@@ -26,7 +26,7 @@ public class SeedController {
 		for (Topic topic : topics) {
 			topicDAO.save(topic);
 		}
-		return "seeded";
+		return "All topics are seeded";
 	}
 
 }
