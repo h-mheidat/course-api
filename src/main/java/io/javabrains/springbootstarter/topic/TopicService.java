@@ -7,22 +7,22 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service 
 public class TopicService {
-
+	
 	@Autowired
 	private TopicDAO topicDAO;
-
+	
 	public List<Topic> getAllTopic() {
-		List<Topic> topics = new ArrayList<>();
+		List <Topic> topics = new ArrayList<>();
 		topicDAO.findAll().forEach(topics::add);
 		return topics;
 	}
-
+	
 	public Optional<Topic> getTopic(String id) {
 		return topicDAO.findById(id);
 	}
-
+	
 	public void addTopic(Topic topic) {
 		topicDAO.save(topic);
 	}
